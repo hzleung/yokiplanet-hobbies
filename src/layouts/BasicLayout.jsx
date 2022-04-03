@@ -15,7 +15,7 @@ const BasicLayout = (props) => {
     global,
     userData,
   } = props;
-
+  console.log('children', children);
   return (
     <Layout className={styles.siteLayout}>
       <GlobalHeader userData={userData} {...props} />
@@ -25,7 +25,7 @@ const BasicLayout = (props) => {
         >
           <div
             className={styles.siteLayoutBackground}
-            style={{ padding: 24, minHeight: 360 }}
+            style={{ minHeight: 360 }}
           >
             {children}
           </div>

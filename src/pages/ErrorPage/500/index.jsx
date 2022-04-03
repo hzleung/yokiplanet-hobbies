@@ -11,7 +11,11 @@ export default () => {
       status="500"
       title="500"
       subTitle="服务器异常"
-      extra={<Button type="primary" onClick={() => history.push('/') }>返回首页</Button>}
+      extra={
+        <Button type="primary" onClick={() => history.push('/')}>
+          返回首页
+        </Button>
+      }
     />
-  )
+  );
 };

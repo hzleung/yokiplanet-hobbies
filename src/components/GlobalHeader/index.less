@@ -3,104 +3,34 @@
 @header-background: #002140;
 
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 174px;
-  padding: 0 160px;
-  background: #fff;
+  justify-content: end;
+  background: transparent;
 
-  // opacity: .5;
-  &Center {
-    margin-top: 58px;
-  }
-
-  &Left,
-  &Right {
-    margin-top: 58px;
-  }
-
-  &Left {
-    :global {
-
-      .ant-menu-horizontal {
-        border-bottom: none;
-      }
-      .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item,
-      .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu {
-        padding: 0 46px;
-      }
-
-      .ant-menu-submenu::after,
-      .ant-menu-item::after {
-        border-bottom: none!important;
-      }
-    }
-  }
-
-  &Right {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-
-    :global {
-      .ant-input-search {
-        margin: 14px 40px;
-        border-bottom: 1px solid rgba(235, 229, 214, 1);
-      }
-
-      .ant-btn {
-        box-shadow: none;
-        border: none;
-      }
-
-      .ant-input {
-        color: rgba(48, 48, 48, 1);
-      }
-
-      .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
-        color: #000000;
-      }
-    }
-
-    .shopCart,
-    .login {
-      margin-left: 100px;
-      cursor: pointer;
-      line-height: normal;
-    }
-
-    .login {
-      .userInfo {
-        .account {
-          .avatar {
-            margin-right: 8px;
-            color: @primary-color;
-            vertical-align: top;
-            background: rgba(255, 255, 255, 0.85);
-          }
-        }
-      }
-      .action {
-        display: inline!important;
-        margin-left: 40px;
-      }
-    }
-  }
-
-  .user {
-    color: #fff;
-    cursor: pointer;
-  }
-}
-
-.userMenu {
   :global {
-    .anticon {
-      margin-right: 8px;
+    .ant-menu-horizontal {
+      background: transparent;
+      border-bottom: none;
     }
-    .ant-dropdown-menu-item {
-      min-width: 160px;
+
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+      padding: 0 40px;
     }
+
+    .ant-menu-item::after,
+    .ant-menu-item:hover::after,
+    .ant-menu-item-active::after {
+      border-bottom: none !important;
+    }
+  }
+
+  .menuItem {
+    color: #fff;
   }
 }
